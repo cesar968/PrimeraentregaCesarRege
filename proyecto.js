@@ -1,9 +1,10 @@
 // Declaracion de variables y constantes globales
-const IVA = 0.21;
+
 
 // Declaracion de funciones
 const calcularIVA = (precio) => {
-    return (precio * IVA);
+    let IVA = parseFloat(prompt("Ingrese iva"));
+    return (precio * IVA) / 100;
 }
 
 const calcularDescuento = (precio, porcentaje) => {
@@ -24,8 +25,8 @@ const calcularPromedioPrecio = () => {
     do {
         sumatoria += parseFloat(prompt("Ingrese precio"));                        
         cant++;
-        continuar = prompt("¿Desea ingresar más precios? S/N");    
-    } while (continuar == "S");
+        continuar = prompt("¿Desea ingresar más precios? SI/NO");    
+    } while (continuar == "SI");
     
     return sumatoria/cant;    
 }
